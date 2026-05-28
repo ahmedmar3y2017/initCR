@@ -1,0 +1,9 @@
+camunda:
+  base-url: ${CAMUNDA_BASE_URL:http://localhost:8080/engine-rest}
+  username: ${CAMUNDA_USERNAME:}
+  password: ${CAMUNDA_PASSWORD:}
+
+logging:
+  level:
+    com.example.camunda_client: INFO
+    com.example.camunda_client.workflow.camunda: INFO

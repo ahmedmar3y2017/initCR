@@ -1,0 +1,9 @@
+camunda:
+  base-url: http://localhost:8080/engine-rest
+  auto-deployment:
+    enabled: false
+
+logging:
+  level:
+    com.example.camunda_client: INFO
+    com.example.camunda_client.workflow.camunda: WARN

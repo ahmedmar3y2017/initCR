@@ -1,0 +1,8 @@
+services:
+  camunda-client:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      CAMUNDA_BASE_URL: http://host.docker.internal:8080/engine-rest

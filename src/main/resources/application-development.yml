@@ -1,0 +1,7 @@
+camunda:
+  base-url: ${CAMUNDA_BASE_URL:http://localhost:8080/engine-rest}
+
+logging:
+  level:
+    com.example.camunda_client: DEBUG
+    com.example.camunda_client.workflow.camunda: DEBUG

@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: camunda-client
+  profiles:
+    active: local
+
+server:
+  port: 8081
+
+workflow:
+  engine: camunda
+
+camunda:
+  enabled: true
+  base-url: http://localhost:8080/engine-rest
+  username:
+  password:
+  connect-timeout: 5s
+  read-timeout: 30s
+  auto-deployment:
+    enabled: true
+    resource-pattern: classpath*:processes/**/*.bpmn
+    deployment-name-prefix: auto
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+logging:
+  pattern:
+    level: "%5p [correlationId:%X{correlationId:-}]"
+  level:
+    com.example.camunda_client: INFO
+    com.example.camunda_client.workflow.camunda: INFO
+    org.springframework.web: INFO
