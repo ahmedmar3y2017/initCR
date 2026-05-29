@@ -11,7 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -34,11 +34,16 @@ public class BpmnAutoDeployer implements ApplicationRunner {
     private final CamundaProperties properties;
     private final WorkflowEngine workflowEngine;
     private final WebClient camundaWebClient;
+    private final ResourcePatternResolver resourcePatternResolver;
 
-    public BpmnAutoDeployer(CamundaProperties properties, WorkflowEngine workflowEngine, WebClient camundaWebClient) {
+    public BpmnAutoDeployer(CamundaProperties properties,
+                            WorkflowEngine workflowEngine,
+                            WebClient camundaWebClient,
+                            ResourcePatternResolver resourcePatternResolver) {
         this.properties = properties;
         this.workflowEngine = workflowEngine;
         this.camundaWebClient = camundaWebClient;
+        this.resourcePatternResolver = resourcePatternResolver;
     }
 
     @Override
@@ -49,7 +54,7 @@ public class BpmnAutoDeployer implements ApplicationRunner {
         }
 
         String pattern = properties.autoDeployment().resourcePattern();
-        Resource[] resources = new PathMatchingResourcePatternResolver().getResources(pattern);
+        Resource[] resources = resourcePatternResolver.getResources(pattern);
         if (resources.length == 0) {
             log.info("No BPMN resources found for pattern={}", pattern);
             return;
