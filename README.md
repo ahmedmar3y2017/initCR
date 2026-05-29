@@ -30,6 +30,18 @@ Health:
 curl http://localhost:8081/actuator/health
 ```
 
+Swagger UI:
+
+```text
+http://localhost:8081/swagger-ui.html
+```
+
+OpenAPI JSON:
+
+```text
+http://localhost:8081/v3/api-docs
+```
+
 ## Profiles
 
 Shared defaults live in `src/main/resources/application.yml`.
@@ -146,6 +158,8 @@ For each BPMN file it:
 - Deployments: `/api/workflow/deployments`
 - History: `/api/workflow/history`
 - External tasks: `/api/workflow/external-tasks`
+- Legacy compatibility: `/api/process/start/{key}`
+- Actuator health/info: `/actuator/health`, `/actuator/info`
 
 ## Project Structure
 

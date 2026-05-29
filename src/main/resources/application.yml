@@ -32,6 +32,15 @@ management:
       probes:
         enabled: true
 
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
 logging:
   pattern:
     level: "%5p [correlationId:%X{correlationId:-}]"

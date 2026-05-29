@@ -7,3 +7,6 @@ logging:
   level:
     com.example.camunda_client: INFO
     com.example.camunda_client.workflow.camunda: WARN
+springdoc:
+  api-docs:
+    enabled: false
