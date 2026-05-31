@@ -1,5 +1,5 @@
 services:
-  camunda-client:
+  copy-right-service:
     build: .
     ports:
       - "8081:8081"

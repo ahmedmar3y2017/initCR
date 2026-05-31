@@ -6,7 +6,7 @@ RUN mvn -B clean package -DskipTests
 
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY --from=build /workspace/target/camunda-client-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /workspace/build/libs/copy-right-service-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8081
 

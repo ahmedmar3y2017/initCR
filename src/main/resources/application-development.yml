@@ -3,5 +3,5 @@ camunda:
 
 logging:
   level:
-    com.example.camunda_client: DEBUG
-    com.example.camunda_client.workflow.camunda: DEBUG
+    sa.gov.saip: DEBUG
+    sa.gov.saip.workflow.camunda: DEBUG

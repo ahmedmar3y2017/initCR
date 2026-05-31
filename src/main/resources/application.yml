@@ -1,6 +1,6 @@
 spring:
   application:
-    name: camunda-client
+    name: copy-right-service
   profiles:
     active: local
 
@@ -45,6 +45,6 @@ logging:
   pattern:
     level: "%5p [correlationId:%X{correlationId:-}]"
   level:
-    com.example.camunda_client: INFO
-    com.example.camunda_client.workflow.camunda: INFO
+    sa.gov.saip: INFO
+    sa.gov.saip.workflow.camunda: INFO
     org.springframework.web: INFO

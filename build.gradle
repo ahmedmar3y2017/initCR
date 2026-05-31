@@ -7,7 +7,7 @@ def springBootVersion = '4.0.6'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-description = 'Spring Boot 4 client for a remote Camunda 7 REST engine'
+description = 'Copy Right Service'
 
 java {
     toolchain {

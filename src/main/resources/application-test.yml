@@ -5,5 +5,5 @@ camunda:
 
 logging:
   level:
-    com.example.camunda_client: INFO
-    com.example.camunda_client.workflow.camunda: WARN
+    sa.gov.saip: INFO
+    sa.gov.saip.workflow.camunda: WARN

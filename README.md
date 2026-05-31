@@ -1,4 +1,4 @@
-# Spring Boot 4 Workflow Client
+# Copy Right Service
 
 Spring Boot 4 / Java 21 workflow client with a pluggable workflow abstraction and a Camunda 7 REST implementation backed by `WebClient`.
 
@@ -73,7 +73,7 @@ SPRING_PROFILES_ACTIVE=production \
 CAMUNDA_BASE_URL=https://camunda.example.com/engine-rest \
 CAMUNDA_USERNAME=my-user \
 CAMUNDA_PASSWORD=my-password \
-java -jar build/libs/camunda-client-0.0.1-SNAPSHOT.jar
+java -jar build/libs/copy-right-service-0.0.1-SNAPSHOT.jar
 ```
 
 ## Build

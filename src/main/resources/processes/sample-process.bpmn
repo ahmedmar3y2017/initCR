@@ -4,7 +4,7 @@
                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
                   id="Definitions_sample_process"
-                  targetNamespace="http://example.com/camunda-client">
+                  targetNamespace="http://example.com/copy-right-service">
     <bpmn:process id="sampleProcess" name="Sample Process" isExecutable="true">
         <bpmn:startEvent id="StartEvent_1" name="Start"/>
         <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_1"/>
