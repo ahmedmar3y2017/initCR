@@ -16,10 +16,10 @@ Spring Boot 4 / Java 21 workflow client with a pluggable workflow abstraction an
 
 ## Run Locally
 
-This machine has a `.mavenrc` that points Maven to Java 8, so use:
+This machine defaults to Java 8, so use Java 21 when running Gradle. If `JAVA_HOME` is not already pointing at a Java 21 installation, set it first and then run:
 
 ```bash
-MAVEN_SKIP_RC=true JAVA_HOME=/opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home mvn spring-boot:run
+./gradlew bootRun
 ```
 
 The app runs on `http://localhost:8081`.
@@ -73,19 +73,31 @@ SPRING_PROFILES_ACTIVE=production \
 CAMUNDA_BASE_URL=https://camunda.example.com/engine-rest \
 CAMUNDA_USERNAME=my-user \
 CAMUNDA_PASSWORD=my-password \
-java -jar target/camunda-client-0.0.1-SNAPSHOT.jar
+java -jar build/libs/camunda-client-0.0.1-SNAPSHOT.jar
 ```
 
 ## Build
 
 ```bash
-MAVEN_SKIP_RC=true JAVA_HOME=/opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home mvn clean install
+./gradlew clean build
+```
+
+## Test
+
+```bash
+./gradlew test
+```
+
+## Package
+
+```bash
+./gradlew bootJar
 ```
 
 ## Docker
 
 ```bash
-MAVEN_SKIP_RC=true JAVA_HOME=/opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home mvn clean package
+./gradlew clean bootJar
 docker compose up --build
 ```
 
