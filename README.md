@@ -176,7 +176,7 @@ For each BPMN file it:
 ## Project Structure
 
 ```text
-src/main/java/com/example/camunda_client
+src/main/java/sa/gov/saip
 ├── logging
 └── workflow
     ├── api
